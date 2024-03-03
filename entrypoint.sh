@@ -6,9 +6,14 @@ mkdir -p /out/bin
 # Remove any existing build artifacts
 rm -rf /out/bin/*
 rm -f backend
+rm -rf dist/
+rm -rf node_modules/
 
 # Install backend dependencies
 npm install
+
+# Build the backend
+npm run build
 
 # Copy the node binary to the backend directory
 cp $(command -v node) backend
