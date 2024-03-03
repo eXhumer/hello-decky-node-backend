@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Make sure the output directory exists
-mkdir -p /out/bin
+mkdir -p /backend/out/bin
 
 # Remove any existing build artifacts
-rm -rf /out/bin/*
+rm -rf /backend/out/bin/*
 rm -f backend
 rm -rf dist/
 rm -rf node_modules/
@@ -28,4 +28,4 @@ echo "NodeJS Version: $(./backend --version)"
 npx --yes postject backend NODE_SEA_BLOB sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2
 
 # Copy the backend to the output directory
-mv backend /out/bin/
+mv backend /backend/out/bin/
